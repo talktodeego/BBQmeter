@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    background-color: #16151A;
+    width: 100%;
+    height: 929px;
+}
+
+.initialText{
+    float: left;
+    color: #ffffff;
+    width: 35%;
+    margin: 300px 0 0 150px;
+}
+
+    .initialText h1{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .initialText p{
+        margin-bottom: 20px;
+    }
+
+    .initialText button{
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+        background-color: #5E78FF;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .initialText button:hover{
+        background-color: #4b60ca;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+.card{
+    background-color: #FFD6E0;
+    float: right;
+    width: 40%;
+    height: 98%;
+    padding: 0 50px 0 50px;
+    margin: 10px 20px 0 0;
+    border-radius: 20px;
+}
+
+.card .cardFront img{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+}
+
+.cardFront, .cardBack{
+    backface-visibility: hidden;
+}
+
+.cardFront{
+    z-index: 2;
+}
+
+.cardBack{
+    transform: rotateY(180deg);
+    margin-top: -600px;
+    margin-left: 100px;
+    width: 60%;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cardBack h1{
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #16151A;
+}
+
+.cardBack input{
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cardBack button{
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    color: #FFD6E0;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    background-color: #16151A;
+}
+
+.cardBack button:hover{
+    background-color: #000000;
+}
+
+#result p{
+    margin-bottom: 10px;
+}
+
+.is-flipped .cardFront{
+    transform: rotateY(180deg);
+}
+
+.is-flipped .cardBack{
+    transform: rotateY(0);
+    z-index: 2;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+    .initialText{
+        margin: 240px 0 0 70px;
+    }
+
+    .card{
+        padding: 0 0 0 0;
+    }
+
+    .card .cardFront img{
+        margin-top: 240px;
+    }
+
+    .cardBack{
+        margin-top: -375px;
+        margin-left: 0;
+    }
+
+    .cardBack h1{
+        font-size: 40px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+
+    .main-container{
+        height: 150vh;
+    }
+
+    .initialText{
+        width: 90%;
+        margin: 70px 0 0 40px;
+    }
+
+    .card{
+        float: none;
+        width: 90vw;
+        height: 100vh;
+        padding: 0;
+        margin: 450px 0 0 30px;
+
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .main-container{
+        height: 125vh;
+    }
+
+    .initialText{
+        width: 75%;
+        margin: 60px 0 0 40px;
+    }
+
+    .initialText h1{
+        font-size: 40px;
+    }
+
+    .card{
+        margin: 450px 0 0 0;
+        padding: 0;
+        float: none;
+        width: 96vw;
+        height: 70vh;
+    }
+
+    .card .cardFront img{
+        display: initial;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .card .cardBack{
+        margin-top: -450px;
+        margin-left: 30px;
+    }
+
+}
+
+
+
+
+@media all and (max-width: 480px) {
+    .main-container{
+        width: 102vw;
+        height: 142vh;
+        display: block;
+        background-color: #16151A;
+    }
+
+    .initialText{
+        float: none;
+        width: 90%;
+        color: #ffffff;
+        margin: 0 auto;
+        padding-top: 70px;
+    }
+
+    .initialText h1{
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .card{
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 70vh;
+    }
+
+    .card .cardFront img{
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+
+    .cardBack{
+        width: 70%;
+        margin-top: -400px;
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQmeter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="main-container">
+
+        <section class="home">
+            <section class="initialText">
+                <h1>Vai fazer um <span style="color: #4b60ca">churrasco?</span> Use o <span style="color: #4b60ca">Churrascômetro!</span></h1>
+                <p>Calcule quantos kgs de carne, litros de cerveja, refrigerante e água você vai precisar.</p>
+                <button id="flip-button">Use agora!</button>
+            </section>
+
+            <div class="card">
+                <div class="cardFront">
+                    <img src="img/churrasco.png" alt="ilustração churrasqueira">
+                </div>
+
+                <div class="cardBack">
+                    <h1>Churrascômetro</h1>
+                    <input id="adultos" name="adultos" type="number" placeholder="Adultos" required min="0">
+                    <input id="criancas" name="criancas" type="number" placeholder="Crianças" required>
+                    <input id="duracao" name="duracao" type="number" placeholder="Duração" required>
+                    <button onclick="calcular()">Calcular</button>
+
+                    <div id="result">
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
